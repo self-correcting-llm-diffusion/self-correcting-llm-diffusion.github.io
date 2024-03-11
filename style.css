@@ -231,18 +231,21 @@ body {
     width: 100%;
 }
 
+
 .video-wrapper {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     position: relative;
-    width: 100%;
-    /* Preserve aspect ratio of the video */
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    width: 100%; /* Ensure the wrapper takes the full width of its parent */
+    height: 75%; /* Initial height to 0 */
+    overflow: hidden; /* In case of slight miscalculations or rounding */
 }
 
 .video-wrapper iframe {
     position: absolute;
-    top: 50%;
-    left: 50%;
     width: 90%;
     height: 90%;
-    transform: translate(-50%, -50%);
+    /* No need for top, left, or transform properties */
 }
+
